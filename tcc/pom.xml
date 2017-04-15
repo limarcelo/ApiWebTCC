@@ -63,21 +63,34 @@
 		    <version>9.4-1206-jdbc42</version>
 		</dependency>
 		
+		
 		<dependency>
-		<groupId>org.springframework.boot</groupId>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+<!-- 		<dependency> -->
+<!-- 		<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-starter-thymeleaf</artifactId> -->
+<!-- 		</dependency> -->
 		
-		<dependency>
-		<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 		<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-devtools</artifactId> -->
+<!-- 		</dependency> -->
 		
+<!-- 		<dependency> -->
+<!-- 		    <groupId>io.jsonwebtoken</groupId> -->
+<!-- 		    <artifactId>jjwt</artifactId> -->
+<!-- 		    <version>0.6.0</version> -->
+<!-- 		</dependency> -->
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2 -->
 		<dependency>
-		    <groupId>io.jsonwebtoken</groupId>
-		    <artifactId>jjwt</artifactId>
-		    <version>0.6.0</version>
+		    <groupId>org.springframework.security.oauth</groupId>
+		    <artifactId>spring-security-oauth2</artifactId>
+		    <version>2.1.0.RELEASE</version><!--$NO-MVN-MAN-VER$-->
 		</dependency>
+				
 		
 	</dependencies>
 	
