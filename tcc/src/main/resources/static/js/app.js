@@ -1,20 +1,41 @@
 var picolApp = angular.module("picolApp", []);
 
-picolApp.controller("loginController", function($scope, $http){
-	$scope.usuario = "Jão";
+picolApp.controller("indexController", function($scope, $http){
+	$scope.nome = "Jão";
+	$scope.sobrenome = "da Silva";
+	$scope.usuarios=[];
+	$scope.usuario={};
 	
-	$http({
-		  method: 'GET',
-		  url: '/usuario/listar'
-		}).then(function successCallback(response) {
-		    console.log(reponse.data);
-		    onsole.log(reponse.status);
-		  }, function errorCallback(response) {
-			    console.log(reponse.data);
-			    console.log(reponse.status);
+	$scope.carregarUsuario = function(){
+		$http({
+			  method: 'GET',
+			  url: '/usuario/listar'
+			}).then(function successCallback(response) {
+				$scope.usuarios= response.data;
+			    console.log(response.status);
+			  }, function errorCallback(response) {
+			    console.log(response.data);
+			    console.log(response.status);
 		  });
+	};
 	
+	$scope.cadastrarUsuario = function(){
+		$http({
+			  method: 'POST',
+			  url: '/usuario/cadastrar',
+			  data: cliente})
+			  .then(function successCallback(response) {
+				$scope.usuarios= response.data;
+			    console.log(response.status);
+			  }, function errorCallback(response) {
+			    console.log(response.data);
+			    console.log(response.status);
+		  });
+	};
 	
+	$scope.carregarUsuario();
+	
+
 });
 
 
